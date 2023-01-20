@@ -36,7 +36,7 @@ AppAsset::register($this);
             </div>
 
             <nav class="flex justify-center header-nav hidden"></nav>
-            <form action="<?php echo Url::to([Yii::$app->params['frontendUrl'] . 'recipe/search']) ?>"
+            <form action="<?php echo Yii::$app->params['frontendUrl'] . 'recipe/search' ?>"
                 class="input-group search-header">
                 <input type="search" placeholder="Поиск..." name="keyword"
                     value="<?php echo Yii::$app->request->get('keyword') ?>" />
