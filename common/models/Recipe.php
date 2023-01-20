@@ -81,7 +81,7 @@ class Recipe extends \yii\db\ActiveRecord
             'servings' => 'Количество порций',
             'difficulty' => 'Сложность',
             'created_at' => 'Дата создания',
-            'tags' => 'Тэги',
+            'tags' => 'Ключевые слова',
             'status' => 'Статус',
         ];
     }
