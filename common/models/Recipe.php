@@ -168,8 +168,8 @@ class Recipe extends \yii\db\ActiveRecord
                 'class' => SluggableBehavior::class,
                 'attribute' => 'name',
                 'ensureUnique' => true,
-                'immutable' => true
-                // 'slugAttribute' => 'slug',
+                'immutable' => true,
+                'slugAttribute' => 'slug',
             ],
         ];
     }

@@ -19,7 +19,9 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title>
+        <?= Html::encode($this->title) ?>
+    </title>
     <?php $this->head() ?>
 </head>
 
@@ -36,7 +38,7 @@ AppAsset::register($this);
             </div>
 
             <nav class="flex justify-center header-nav hidden"></nav>
-            <form action="<?php echo Yii::$app->params['frontendUrl'] . 'recipe/search' ?>"
+            <form action="<?php echo Yii::$app->urlManagerFrontend->createUrl(['recipe/search']) ?>"
                 class="input-group search-header">
                 <input type="search" placeholder="Поиск..." name="keyword"
                     value="<?php echo Yii::$app->request->get('keyword') ?>" />
@@ -44,13 +46,12 @@ AppAsset::register($this);
             </form>
             <div class="flex">
                 <?php if (!Yii::$app->user->isGuest): ?>
-                    <a href="<?php echo Yii::$app->params['backendUrl'] ?>recipe/index" class="btn bg-yellow"><span
-                            class="icon icon--user"></span></a>
-                    <a href="<?php echo Yii::$app->params['backendUrl'] ?>recipe/create" class="btn bg-green"><span
-                            class="icon icon--plus"></span>Создать</a>
+                    <a href="<?php echo Yii::$app->urlManagerBackend->createUrl(['recipe/index']) ?>"
+                        class="btn bg-yellow"><span class="icon icon--user"></span></a>
+                    <a href="<?php echo Yii::$app->urlManagerBackend->createUrl(['recipe/create']) ?>"
+                        class="btn bg-green"><span class="icon icon--plus"></span>Создать</a>
                 <?php else: ?>
-                    <a href="/site/login" class="btn bg-yellow"><span
-                            class="icon icon--user"></span>Войти</a>
+                    <a href="/site/login" class="btn bg-yellow"><span class="icon icon--user"></span>Войти</a>
                 <?php endif; ?>
             </div>
             </nav>
@@ -69,7 +70,8 @@ AppAsset::register($this);
     </div>
 
     <footer>
-        <p>&copy; <?= Html::encode(Yii::$app->name) ?>
+        <p>&copy;
+            <?= Html::encode(Yii::$app->name) ?>
             <?= date('Y') ?>
         </p>
     </footer>

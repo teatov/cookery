@@ -46,6 +46,7 @@ return [
                 // 'recipe/index' => 'recipe/index',
                 // 'recipe/<slug>' => 'recipe/view',
                 // 'recipe/update/<slug>' => 'recipe/update'
+                // 'recipe/view' => Yii::$app->params['frontendUrl'] . 'recipe/view',
             ],
         ],
         'assetManager' => [

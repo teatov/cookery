@@ -74,9 +74,11 @@ class RecipeController extends Controller
      */
     public function actionView($slug)
     {
-        return $this->render('view', [
-            'model' => $this->findModel($slug),
-        ]);
+        // return $this->render('view', [
+        //     'model' => $this->findModel($slug),
+        // ]);
+        // return $this->redirect([Yii::$app->params['frontendUrl'].'recipe/view', 'slug' => $slug]);
+        return $this->redirect(Yii::$app->urlManagerFrontend->createUrl(['recipe/view', 'slug' => $slug]));
     }
 
     /**
