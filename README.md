@@ -1,4 +1,4 @@
-Курсовой проект. Сайт для создания и просмотра рецептов на PHP, Yii2 и MySQL.
+Курсовой проект. [Этот же проект](https://github.com/teatov/Web-Project-Recipes), переписанный на PHP, Yii2 и MySQL.
 
 ![cookery](https://github.com/teatov/cookery/assets/79892286/3ada6c5e-2f9c-4cfb-b928-735f84ec4365)
 
